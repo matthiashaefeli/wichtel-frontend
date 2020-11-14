@@ -1,0 +1,21 @@
+.navMain {
+  margin: auto;
+  background-image: url('../../images/lego.png');
+  width: 98vw;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+}
+
+.wichtelMain {
+  border: 10px solid #0d6e98;
+  width: 155px;
+  position: absolute;
+  top: 25vh;
+}
+
+.wichtelImage {
+  height: 150px;
+  margin-bottom: -3px;
+}
+
