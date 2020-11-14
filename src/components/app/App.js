@@ -7,14 +7,14 @@ import Offer from '../offer/Offer';
 import Renovation from '../renovation/Renovation';
 import Place from '../place/Place';
 import { Route, Switch } from 'react-router-dom';
-import Navbar from '../navbar/Navbar';
+import Main from '../main/Main';
 
 
 class App extends Component {
   render() {
     return (
       <>
-        <Navbar />
+        <Main />
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/contact' component={Contact} />
