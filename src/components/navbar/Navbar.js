@@ -11,7 +11,7 @@ class Navbar extends Component {
           <div><a href='/daily' className='links'>ein ganz normaler morgen</a></div>
         </div>
         <div className='navBarInner navBarRight'>
-          <div><a href='/place' className='links'>Räumlichkeiten</a></div>
+          <div><a href='/place' className='links'>fotos</a></div>
           <div><a href='/location' className='links'>Karte</a></div>
           <div><a href='/news' className='links'>Neues</a></div>
           <div><a href='/contact' className='links'>Kontakt</a></div>
