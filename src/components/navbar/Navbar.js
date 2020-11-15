@@ -12,7 +12,8 @@ class Navbar extends Component {
         </div>
         <div className='navBarInner navBarRight'>
           <div><a href='/place' className='links'>Räumlichkeiten</a></div>
-          <div><a href='/map' className='links'>Karte</a></div>
+          <div><a href='/location' className='links'>Karte</a></div>
+          <div><a href='/news' className='links'>Neues</a></div>
           <div><a href='/contact' className='links'>Kontakt</a></div>
         </div>
       </div>
