@@ -11,7 +11,6 @@ class News extends Component {
   }
 
   componentDidMount = () => {
-    console.log(axios.get('https://wichtelhuss.herokuapp.com/blog_home'))
     axios.get('https://wichtelhuss.herokuapp.com/blog_home')
     .then(
       result => {
