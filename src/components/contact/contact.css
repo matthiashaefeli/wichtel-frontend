@@ -53,3 +53,13 @@
   width: 200px;
   height: 100px;
 }
+
+.backendLink {
+  text-decoration: none;
+  color: black;
+}
+
+.backendLink:hover {
+  cursor: initial;
+}
+ 
