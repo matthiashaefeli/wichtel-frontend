@@ -10,3 +10,14 @@
 .fotosFoto {
   text-align: center;
 }
+
+@media only screen and (max-width: 1000px) {
+  .fotosMain {
+    flex-direction: column;
+  }
+
+  .fotosFoto {
+    width: 50%;
+    /* margin: auto; */
+  }
+}
