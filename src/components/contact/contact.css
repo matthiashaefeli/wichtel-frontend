@@ -62,4 +62,19 @@
 .backendLink:hover {
   cursor: initial;
 }
- 
+
+@media only screen and (max-width: 1070px) {
+  .contactMain {
+    justify-content: space-between;
+  }
+
+  .contactImageBox {
+    width: auto;
+    height: 50%;
+  }
+
+  .contactTextBox {
+    width: auto;
+    margin-left: 5px;
+  }
+}
