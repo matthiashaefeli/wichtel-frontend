@@ -37,7 +37,7 @@ class Place extends Component {
     let counter
     if (this.state.current_image === 0) {
       counter = this.state.fotos.length - 1
-    } else counter = this.state.current_image -= 1
+    } else counter = this.state.current_image - 1
 
     this.setState({
       current_image: counter
@@ -48,7 +48,7 @@ class Place extends Component {
     let counter
     if (this.state.fotos.length - 1 === this.state.current_image) {
       counter = 0
-    } else counter = this.state.current_image += 1
+    } else counter = this.state.current_image + 1
 
     this.setState({
       current_image: counter
