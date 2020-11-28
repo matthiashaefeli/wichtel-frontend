@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { Component } from 'react';
 import './contact.css';
 
@@ -9,7 +10,8 @@ class Form extends Component {
       name: '',
       email: '',
       subject: '',
-      message: ''
+      message: '',
+      response: ''
     }
 
     this.handleChange = this.handleChange.bind(this);
@@ -23,11 +25,27 @@ class Form extends Component {
   }
 
   handleSubmit = () => {
-    
+    axios.post('https://wichtelhuss.herokuapp.com/questions', { question: {
+      name: this.state.name,
+      email: this.state.email,
+      subject: this.state.subject,
+      message: this.state.message
+    }})
+    .then(function (response) {
+      this.setState({
+        response: response
+      })
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  
   }
 
 
   render() {
+    console.log(this.state.response)
     return (
       <div className='contactFormMain'>
         <div className='contactInfo'>

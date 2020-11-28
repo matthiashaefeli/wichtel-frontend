@@ -7,10 +7,10 @@ class About extends Component {
     return (
       <div className='contactMain'>
       <div className='contactImageBox'>
-        <img src={ContactImage} alt='contact image' className='contactImage' />
+        <img src={ContactImage} alt='contact' className='contactImage' />
       </div>
       <div className='contactTextBox'>
-          Mein Name ist <a href='https://wichtelhuss.herokuapp.com/' target='_blank' className='backendLink'>Tonja</a> Haefeli<br />
+          Mein Name ist <a rel='noreferrer' href='https://wichtelhuss.herokuapp.com/' target='_blank' className='backendLink'>Tonja</a> Haefeli<br />
           Ich habe selber Kinder im Alter von 14 und 20 Jahren.<br />
           Nach meiner Ausbildung zur Spielgruppenleiterin habe ich das Wichtelhuus gegründet.<br />
           Mir macht es riesen Spass mit den Kindern den Morgen zu verbringen.
