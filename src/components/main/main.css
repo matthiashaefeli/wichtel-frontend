@@ -1,6 +1,6 @@
 .navMain {
   margin: auto;
-  background-image: url('../../images/lego.png');
+  /* background-image: url('../../images/blocks.png'); */
   width: 98vw;
   height: 40vh;
   display: flex;
