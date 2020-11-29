@@ -76,4 +76,8 @@
   .contactFormMain {
     flex-direction: column;
   }
+
+  .contactForm {
+    margin-top: 30px;
+  }
 }
