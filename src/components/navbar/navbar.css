@@ -37,4 +37,8 @@
     flex-direction: column;
     justify-content: center;
   }
+
+  .navBar {
+    font-size: 1em;
+  }
 }

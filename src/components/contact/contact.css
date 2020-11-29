@@ -66,15 +66,14 @@
 @media only screen and (max-width: 1070px) {
   .contactMain {
     justify-content: space-between;
-  }
-
-  .contactImageBox {
-    width: auto;
-    height: 50%;
+    flex-direction: column;
   }
 
   .contactTextBox {
     width: auto;
-    margin-left: 5px;
+  }
+
+  .contactFormMain {
+    flex-direction: column;
   }
 }
