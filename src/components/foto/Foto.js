@@ -4,10 +4,10 @@ import Loading from '../loading/Loading';
 import Detail from './Detail'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowCircleRight, faArrowCircleLeft } from '@fortawesome/free-solid-svg-icons'
-import './place.css'
+import './foto.css'
 
 
-class Place extends Component {
+class Foto extends Component {
   state = {
     error: '',
     isLoaded: false,
@@ -16,7 +16,7 @@ class Place extends Component {
   }
 
   componentDidMount = () => {
-    axios.get('https://wichtelhuss.herokuapp.com/place_home')
+    axios.get('https://wichtelhuss.herokuapp.com/fotos_home')
     .then(
       result => {
         this.setState({
@@ -93,4 +93,4 @@ class Place extends Component {
   }
 }
 
-export default Place;
+export default Foto;
