@@ -3,7 +3,7 @@ import './detail.css'
 
 class Detail extends Component {
   render() {
-    const { title, url, created_at, text } = this.props.detail
+    const { title, url, created_at } = this.props.detail
     return (
       <div className='newsDetail'>
         <h1>{title}</h1>
@@ -12,7 +12,6 @@ class Detail extends Component {
           alt={title}
           className='image'
         /><br />
-        <p>{text}</p>
         <span>Publiziert: {created_at}</span>
       </div>
     );
