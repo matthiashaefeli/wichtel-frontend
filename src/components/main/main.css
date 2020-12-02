@@ -1,6 +1,7 @@
 .navMain {
   margin: auto;
-  /* background-image: url('../../images/blocks.png'); */
+  background-repeat: no-repeat;
+  background-position: center;
   width: 98vw;
   height: 40vh;
   display: flex;

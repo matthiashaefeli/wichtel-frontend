@@ -1,8 +1,9 @@
 .navBar {
-  margin-bottom: 50px;
   display: flex;
   justify-content: space-between;
   font-size: 1.4em;
+  max-width: 1250px;
+  margin: 0 auto 50px auto;
 }
 
 .navBarInner {

@@ -1,23 +1,8 @@
-.fotosMain {
-  display: flex;
-  flex-direction: row;
-  width: 90vw;
-  justify-content: space-around;
-  align-items: center;
+.newsDetail {
+  max-width: 1250px;
   margin: auto;
 }
 
-.fotosFoto {
-  text-align: center;
-}
-
-@media only screen and (max-width: 1000px) {
-  .fotosMain {
-    flex-direction: column;
-  }
-
-  .fotosFoto {
-    width: 50%;
-    /* margin: auto; */
-  }
+.image {
+  width: 80%;
 }
