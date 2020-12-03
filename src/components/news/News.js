@@ -1,7 +1,8 @@
 import axios from 'axios';
 import React, { Component } from 'react';
 import Loading from '../loading/Loading';
-import Detail from './Detail'
+import Detail from './Detail';
+import './news.css';
 
 class News extends Component {
   state = {

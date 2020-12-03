@@ -6,13 +6,12 @@ import Hand from '../../images/handcraft.png';
 import Block from '../../images/blocks.png';
 import School from '../../images/school.png';
 import Lego from '../../images/lego.png';
-import Train from '../../images/train.png'
 
 class Main extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      counter: Math.floor(Math.random() * 5)
+      counter: Math.floor(Math.random() * 4)
     }
   }
 
@@ -33,7 +32,7 @@ class Main extends Component {
   }
 
   render() {
-    const array = [Hand, Block, School, Lego, Train]
+    const array = [Hand, Block, School, Lego]
     return (
       <>
         <div className='navMain' style={{backgroundImage: `url(${array[this.state.counter]})`}}>
