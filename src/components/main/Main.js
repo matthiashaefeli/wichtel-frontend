@@ -6,17 +6,18 @@ import Hand from '../../images/handcraft.png';
 import Block from '../../images/blocks.png';
 import School from '../../images/school.png';
 import Lego from '../../images/lego.png';
+import Train from '../../images/train.png'
 
 class Main extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      counter: 0
+      counter: Math.floor(Math.random() * 5)
     }
   }
 
   changeCounter = () => {
-    if (this.state.counter === 3) {
+    if (this.state.counter === 4) {
       this.setState({
         counter: 0
       })
@@ -32,7 +33,7 @@ class Main extends Component {
   }
 
   render() {
-    const array = [Hand, Block, School, Lego]
+    const array = [Hand, Block, School, Lego, Train]
     return (
       <>
         <div className='navMain' style={{backgroundImage: `url(${array[this.state.counter]})`}}>
