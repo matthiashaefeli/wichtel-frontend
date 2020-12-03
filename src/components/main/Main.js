@@ -16,7 +16,7 @@ class Main extends Component {
   }
 
   changeCounter = () => {
-    if (this.state.counter === 4) {
+    if (this.state.counter === 3) {
       this.setState({
         counter: 0
       })
