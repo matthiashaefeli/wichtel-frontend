@@ -49,6 +49,7 @@ class Form extends Component {
     return (
       <div className='contactFormMain'>
         <div className='contactInfo'>
+          Wichtelhuus<br />
           Seengerstrasse 7<br />
           5706 Boniswil AG<br />
           062 777 38 32<br />
