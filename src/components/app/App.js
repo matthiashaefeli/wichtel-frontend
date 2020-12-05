@@ -9,12 +9,13 @@ import Foto from '../foto/Foto';
 import Place from '../place/Place';
 import { Route, Switch } from 'react-router-dom';
 import Main from '../main/Main';
+import './app.css'
 
 
 class App extends Component {
   render() {
     return (
-      <>
+      <div className='mainDiv'>
         <Main />
         <Switch>
           <Route exact path='/' component={Home} />
@@ -26,7 +27,7 @@ class App extends Component {
           <Route exact path='/fotos' component={Foto} />
           <Route exact path='/place' component={Place} />
         </Switch>
-      </>
+      </div>
     );
   }
 }
