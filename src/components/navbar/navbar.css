@@ -42,4 +42,12 @@
   .navBar {
     font-size: 1em;
   }
+
+  .navBarRight {
+    padding-right: 10px;
+  }
+
+  .navBarLeft {
+    padding-left: 10px;
+  }
 }
