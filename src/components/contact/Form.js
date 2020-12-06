@@ -24,23 +24,28 @@ class Form extends Component {
     })
   }
 
-  handleSubmit = () => {
-    axios.post('https://wichtelhuss.herokuapp.com/questions', { question: {
-      name: this.state.name,
-      email: this.state.email,
-      subject: this.state.subject,
-      message: this.state.message
-    }})
-    .then(function (response) {
-      this.setState({
-        response: response
-      })
-      console.log(response);
+  handleSubmit = async () => {
+    try {
+      const response = await axios
+        .post('https://wichtelhuss.herokuapp.com/questions',
+        { question: {
+                      name: this.state.name,
+                      email: this.state.email,
+                      subject: this.state.subject,
+                      message: this.state.message
+      }})
+      console.log(response)
+    } catch (e) {
+      console.log(e)
+    }
+
+    this.setState({
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
+      response: ''
     })
-    .catch(function (error) {
-      console.log(error);
-    });
-  
   }
 
 
