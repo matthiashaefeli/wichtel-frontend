@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import './main.css';
 import Wichtel from '../../images/wichtel.png';
 import Navbar from '../navbar/Navbar';
-import Hand from '../../images/handcraft.png';
 import Block from '../../images/blocks.png';
-import School from '../../images/school.png';
 import Lego from '../../images/lego.png';
+import Colors from '../../images/colors.png'
+import Hous from '../../images/hous.png'
 
 class Main extends Component {
   constructor(props) {
@@ -32,7 +32,7 @@ class Main extends Component {
   }
 
   render() {
-    const array = [Hand, Block, School, Lego]
+    const array = [Block, Lego, Colors, Hous]
     return (
       <>
         <div className='navMain' style={{backgroundImage: `url(${array[this.state.counter]})`}}>
