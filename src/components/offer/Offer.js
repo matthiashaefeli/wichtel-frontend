@@ -11,10 +11,10 @@ class Offer extends Component {
         </p>
         <p>
           Die Kinder lernen ihren Platz in einer Gruppe mit Gleichaltrigen zu finden, sich behaupten,
-          rücksicht nehmen, einander helfen, aufeinander hören, fair streiten und wieder Frieden schliessen.
+          Rücksicht nehmen, einander helfen, aufeinander hören, fair streiten und wieder Frieden schliessen.
         </p>
         <p>
-          In einer konstanten Gruppe von 8-10 Kinder können die Kinder im sicheren überschaubaren
+          In einer konstanten Gruppe von 8-10 Kindern können die Kinder im sicheren überschaubaren
           Rahmen der Spielgruppe die langsame Ablösung von seinen engsten Bezugspersonen üben.
         </p>
         <p>
