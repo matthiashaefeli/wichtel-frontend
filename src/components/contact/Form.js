@@ -107,7 +107,7 @@ class Form extends Component {
             </div>
             <div>
               <input
-                type='submit'
+                type='button'
                 value='nachricht senden'
                 onClick={this.handleSubmit} />
             </div>
