@@ -5,6 +5,7 @@ import Detail from './Detail'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowCircleRight, faArrowCircleLeft } from '@fortawesome/free-solid-svg-icons'
 import './foto.css'
+import Wichtel from '../../images/wichtel.png';
 
 
 class Foto extends Component {
@@ -60,7 +61,14 @@ class Foto extends Component {
     let div;
 
     if (error) {
-      div = <div>Error: {error.message}</div>
+      div = <div className='fotosMainError'>
+              <img
+                src={Wichtel}
+                alt='WichtelHuus'
+                className='errorImage'
+              />
+              <p>Die Bilder konnten nicht geladen werden.</p>
+            </div>
     } else if (!isLoaded) {
       div = <Loading />
     } else if (this.state.fotos.length > 0) {

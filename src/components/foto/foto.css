@@ -8,6 +8,16 @@
   max-width: 1250px;
 }
 
+.fotosMainError {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  max-width: 1250px;
+}
+
 .fotosFoto {
   text-align: center;
 }
