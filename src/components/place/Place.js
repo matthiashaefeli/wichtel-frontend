@@ -1,12 +1,11 @@
 import axios from 'axios';
 import React, { Component } from 'react';
 import Loading from '../loading/Loading';
-import Detail from './Detail'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowCircleRight, faArrowCircleLeft } from '@fortawesome/free-solid-svg-icons'
-import './place.css'
-import Wichtel from '../../images/wichtel.png';
-
+import Detail from './Detail';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowCircleRight, faArrowCircleLeft } from '@fortawesome/free-solid-svg-icons';
+import ErrorImage from '../error/Error';
+import './place.css';
 
 class Place extends Component {
   state = {
@@ -61,14 +60,7 @@ class Place extends Component {
     let div;
 
     if (error) {
-      div = <div className='fotosMainError'>
-              <img
-                src={Wichtel}
-                alt='WichtelHuus'
-                className='errorImage'
-              />
-              <p>Die Bilder konnten nicht geladen werden.</p>
-            </div>
+      div = <ErrorImage />
     } else if (!isLoaded) {
       div = <Loading />
     } else if (this.state.fotos.length > 0) {
