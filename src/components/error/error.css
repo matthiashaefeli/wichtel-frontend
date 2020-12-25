@@ -1,0 +1,14 @@
+.mainError {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  max-width: 1250px;
+}
+
+.errorImage {
+  margin-top: 30px;
+  height: 200px;
+}

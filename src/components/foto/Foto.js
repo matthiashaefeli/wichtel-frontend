@@ -4,8 +4,8 @@ import Loading from '../loading/Loading';
 import Detail from './Detail'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowCircleRight, faArrowCircleLeft } from '@fortawesome/free-solid-svg-icons'
+import ErrorImage from '../error/Error';
 import './foto.css'
-
 
 class Foto extends Component {
   state = {
@@ -60,7 +60,7 @@ class Foto extends Component {
     let div;
 
     if (error) {
-      div = <div>Error: {error.message}</div>
+      div = <ErrorImage />
     } else if (!isLoaded) {
       div = <Loading />
     } else if (this.state.fotos.length > 0) {
