@@ -11,7 +11,7 @@ class About extends Component {
         </div>
         <div className='contactTextBox'>
             <a rel='noreferrer' href='https://wichtelhuss.herokuapp.com/' target='_blank' className='backendLink'>Mein</a> Name ist Tonja Haefeli<br />
-            Ich habe selber Kinder im Alter von 17 und 22 Jahren.<br />
+            Ich habe selber Kinder im Alter von 20 und 25 Jahren.<br />
             Nach meiner Ausbildung zur Spielgruppenleiterin habe ich das Wichtelhuus gegründet.<br />
             Mir macht es riesen Spass mit den Kindern den Morgen zu verbringen.
             Ich finde es spannend wie sich die Kinder weiterentwickeln und jeden Tag neue interessante,
