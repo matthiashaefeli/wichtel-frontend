@@ -24,7 +24,7 @@ class Offer extends Component {
           Ausser den Schulferien, wo wir uns nach der Schule Boniswil richten.
         </p>
         <p>
-          Die Kosten pro Spielgruppenmorgen betragen 27.- Fr.<br />
+          Die Kosten pro Spielgruppenmorgen betragen 30.- Fr.<br />
           bei Geschwistern 25.- Fr.
         </p>
       </div>
