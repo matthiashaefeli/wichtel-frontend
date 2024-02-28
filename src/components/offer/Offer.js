@@ -19,13 +19,14 @@ class Offer extends Component {
         </p>
         <p>
           Die Spielgruppe findet von Montag- Freitag jeden Morgen um 8:30 Uhr bis 11:30 Uhr statt.
+          Und jeden Montag Nachmittag von 13:30 bis 16:30.
         </p>
         <p>
           Ausser den Schulferien, wo wir uns nach der Schule Boniswil richten.
         </p>
         <p>
           Die Kosten pro Spielgruppenmorgen betragen 30.- Fr.<br />
-          bei Geschwistern 25.- Fr.
+          bei Geschwistern 27.- Fr.
         </p>
       </div>
     );
