@@ -6,16 +6,19 @@
   padding: 10px;
 }
 
-.logoBox {
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 12em;
   width: 12em;
-  text-align: center;
+  margin: auto;
 }
 
 .logoImage {
-  width: 12em;
-  height: 12em;
-  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
 }
 
 @media only screen and (max-width: 1070px) {
