@@ -22,11 +22,9 @@ class News extends Component {
         <p>
           Gemeinsam schaffen wir eine bessere Zukunft für unsere Kinder im Wichtelhuus!
         </p>
-        <div className='logoBox'>
-          <a href='https://apalife.ch/?sponsor=Nils003' target='_blank' rel='noopener noreferrer'>
-            <img src={Apalife} alt='apalife' className='logoImage' />
-          </a>
-        </div>
+        <a href='https://apalife.ch/?sponsor=Nils003' target='_blank' rel='noopener noreferrer'>
+          <img src={Apalife} alt='apalife' className='logoImage' />
+        </a>
       </div>
     );
   }
