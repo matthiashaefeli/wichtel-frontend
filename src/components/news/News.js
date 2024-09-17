@@ -12,7 +12,7 @@ class News extends Component {
         <p>
           Im Wichtelhuus legen wir nicht nur grossen Wert auf die Betreuung unserer Kinder,
           sondern auch auf ihre Zukunft. Durch die Zusammenarbeit mit Apalife kompensieren wir den Stromverbrauch und den Abfall,
-          der in unserer Spielgruppe anfällt. So tragen wir aktiv zum Klimaschutz bei und reduzieren den CO@-Ausstoss.
+          der in unserer Spielgruppe anfällt. So tragen wir aktiv zum Klimaschutz bei und reduzieren den CO2-Ausstoss.
         </p>
         <p>
           Warum tun wir das? Uns liegt es am Herzen, dass die Welt, in der unsere Kinder aufwachsen,
