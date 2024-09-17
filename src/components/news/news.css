@@ -6,7 +6,7 @@
   padding: 10px;
 }
 
-a {
+.logoLink {
   display: flex;
   justify-content: center;
   align-items: center;
