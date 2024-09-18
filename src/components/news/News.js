@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Apalife from '../../images/apalife.png';
-import CertificationPdf from '../../images/certifiaction.pdf'
+import CertificationPdf from '../../images/certification.pdf';
 import './news.css';
 
 class News extends Component {
