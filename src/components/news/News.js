@@ -26,7 +26,7 @@ class News extends Component {
           Gemeinsam schaffen wir eine bessere Zukunft für unsere Kinder im Wichtelhuus!
         </p>
         <a href='https://apalife.ch/?sponsor=Nils003' target='_blank' rel='noopener noreferrer' className='logoLink'>
-          <img src={Apalife} alt='apalife' className='logoImage' />
+          <img src={Apalife} alt='apalife logo' className='logoImage' />
         </a>
         <div>
           <iframe
