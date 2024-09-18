@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Apalife from '../../images/apalife.png';
+import CertificationPdf from '../../images/certifiaction.pdf'
 import './news.css';
 
 class News extends Component {
@@ -27,6 +28,15 @@ class News extends Component {
         <a href='https://apalife.ch/?sponsor=Nils003' target='_blank' rel='noopener noreferrer' className='logoLink'>
           <img src={Apalife} alt='apalife' className='logoImage' />
         </a>
+        <div>
+          <iframe
+            src={CertificationPdf}
+            title="PDF Viewer"
+            width="100%"
+            height="600px"
+            style={{ border: 'none' }}
+          />
+        </div>
       </div>
     );
   }
