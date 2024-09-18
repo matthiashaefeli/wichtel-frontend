@@ -28,11 +28,11 @@ class News extends Component {
         <a href='https://apalife.ch/?sponsor=Nils003' target='_blank' rel='noopener noreferrer' className='logoLink'>
           <img src={Apalife} alt='apalife logo' className='logoImage' />
         </a>
-        <div>
+        <div className='certPdf'>
           <iframe
             src={CertificationPdf}
             title="PDF Viewer"
-            width="100%"
+            width="80%"
             height="600px"
             style={{ border: 'none' }}
           />
