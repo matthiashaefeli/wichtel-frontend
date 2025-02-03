@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ContactImage from '../../images/contact.png';
+import ContactImage from '../../images/anja.jpg';
 import './contact.css';
 
 class About extends Component {
@@ -10,12 +10,10 @@ class About extends Component {
           <img src={ContactImage} alt='contact' className='contactImage' />
         </div>
         <div className='contactTextBox'>
-            <a rel='noreferrer' href='https://wichtelhuss.herokuapp.com/' target='_blank' className='backendLink'>Mein</a> Name ist Tonja Haefeli<br />
-            Ich habe selber Kinder im Alter von 20 und 25 Jahren.<br />
-            Nach meiner Ausbildung zur Spielgruppenleiterin habe ich das Wichtelhuus gegründet.<br />
-            Mir macht es riesen Spass mit den Kindern den Morgen zu verbringen.
-            Ich finde es spannend wie sich die Kinder weiterentwickeln und jeden Tag neue interessante,
-            lustige, kreative, und abwechslungsreiche Ideen haben.
+            <a rel='noreferrer' href='https://wichtelhuss.herokuapp.com/' target='_blank' className='backendLink'>Ich</a> bin Anja Haefeli<br />
+            Ich bin gelernte Fachfrau Betreuung im Bereich Kinder und arbeite jetzt schon mehr als 10 Jahren auf diesem Beruf.<br />
+            Ich durfte das Wichtelhuus mit grosser Freude dieses Jahr (2025) von meiner Mutter Tonja Haefeli übernehmen.<br />
+            Es macht mir riesen spass die Kinder in ihre Entwicklung zu begleiten und unterstützen. Mit ihnen zu wachsen, spielen, lachen, singen und neue Erinnerungen schaffen.
         </div>
       </div>
     );
