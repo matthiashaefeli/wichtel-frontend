@@ -18,12 +18,12 @@ class Foto extends Component {
   componentDidMount = () => {
     // Manually list image filenames stored in public/images/
     const imageList = [
-      "/images/act_1.jpg",
-      "/images/act_2.jpg",
-      "/images/act_3.jpg",
-      "/images/act_4.jpg",
-      "/images/act_5.jpg",
-      "/images/act_6.jpg"
+      "/images/act/act_1.jpg",
+      "/images/act/act_2.jpg",
+      "/images/act/act_3.jpg",
+      "/images/act/act_4.jpg",
+      "/images/act/act_5.jpg",
+      "/images/act/act_6.jpg"
     ];
 
     // Simulating an API call to load images
