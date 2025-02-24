@@ -7,19 +7,31 @@ import { faArrowCircleRight, faArrowCircleLeft } from '@fortawesome/free-solid-s
 import ErrorImage from '../error/Error';
 import './foto.css'
 
-function importAll(r) {
-  return r.keys().map(r);
-}
-
-const images = importAll(require.context("../../assets/images", false, /\.(png|jpe?g|svg)$/));
-
 class Foto extends Component {
   state = {
     error: '',
-    isLoaded: true,
-    fotos: images,
+    isLoaded: false,
+    fotos: [],
     current_image: 0
   }
+
+  componentDidMount = () => {
+    // Manually list image filenames stored in public/images/
+    const imageList = [
+      "/images/act_1.jpg",
+      "/images/act_2.jpg",
+      "/images/act_3.jpg",
+      "/images/act_4.jpg",
+      "/images/act_5.jpg",
+      "/images/act_6.jpg"
+    ];
+
+    // Simulating an API call to load images
+    this.setState({
+      isLoaded: true,
+      fotos: imageList
+    });
+  };
 
   // componentDidMount = () => {
   //   axios.get('https://wichtelhuss.herokuapp.com/fotos_home')
@@ -39,17 +51,17 @@ class Foto extends Component {
   //   )
   // }
 
-  changeLeft = () => {
-    this.setState((prevState) => ({
-      current_image: prevState.current_image === 0 ? prevState.fotos.length - 1 : prevState.current_image - 1
-    }));
-  };
+changeLeft = () => {
+  this.setState((prevState) => ({
+    current_image: prevState.current_image === 0 ? prevState.fotos.length - 1 : prevState.current_image - 1
+  }));
+};
 
-  changeRight = () => {
-    this.setState((prevState) => ({
-      current_image: prevState.current_image === prevState.fotos.length - 1 ? 0 : prevState.current_image + 1
-    }));
-  };
+changeRight = () => {
+  this.setState((prevState) => ({
+    current_image: prevState.current_image === prevState.fotos.length - 1 ? 0 : prevState.current_image + 1
+  }));
+};
 
   render() {
     const { error, isLoaded, fotos, current_image } = this.state;
@@ -68,9 +80,16 @@ class Foto extends Component {
                      onClick={this.changeLeft}
                   />
                 </div>
-                <div className='fotosFoto'>
-                  <Detail key={current_image} detail={{ image: fotos[current_image] }} type="foto" />
+                <div className="fotosFoto">
+                  <img
+                    src={fotos[current_image]}
+                    alt={`Image ${current_image + 1}`}
+                    className="fotoImage"
+                  />
                 </div>
+                {/* <div className='fotosFoto'>
+                  <Detail key={current_image} detail={{ image: fotos[current_image] }} type="foto" />
+                </div> */}
                 <div className='fotosArrow'>
                   <FontAwesomeIcon
                     icon={faArrowCircleRight}
