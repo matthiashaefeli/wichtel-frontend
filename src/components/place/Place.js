@@ -85,7 +85,7 @@ class Place extends Component {
                   <img
                     src={fotos[current_image]}
                     alt={`Image ${current_image + 1}`}
-                    className="fotoImage"
+                    className="image"
                   />
                 </div>
                 {/* <div className='fotosFoto'>

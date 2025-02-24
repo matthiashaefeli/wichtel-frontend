@@ -24,6 +24,10 @@
   margin: auto;
 }
 
+.image {
+  width: 80%;
+}
+
 .errorImage {
   margin-top: 30px;
   height: 200px;
