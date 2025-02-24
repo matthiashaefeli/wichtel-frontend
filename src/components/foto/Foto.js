@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { Component } from 'react';
+import { storage } from '../../firebase/firebase';
 import Loading from '../loading/Loading';
 import Detail from './Detail'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -15,45 +16,40 @@ class Foto extends Component {
     current_image: 0
   }
 
-  componentDidMount = () => {
-    axios.get('https://wichtelhuss.herokuapp.com/fotos_home')
-    .then(
-      result => {
-        this.setState({
-          isLoaded: true,
-          fotos: result.data
-        })
-      },
-      error => {
-        this.setState({
-          isLoaded: true,
-          error
-        })
-      }
-    )
-  }
+  componentDidMount = async () => {
+    try {
+      // Reference to the "images" folder in Firebase Storage
+      const storageRef = ref(storage, "fotos/");
+      const result = await listAll(storageRef);
+
+      // Get download URLs for all images
+      const urlPromises = result.items.map((imageRef) => getDownloadURL(imageRef));
+      const imageUrls = await Promise.all(urlPromises);
+
+      this.setState({
+        isLoaded: true,
+        fotos: imageUrls
+      });
+    } catch (error) {
+      this.setState({
+        isLoaded: true,
+        error: "Error fetching images"
+      });
+      console.error("Error fetching images:", error);
+    }
+  };
 
   changeLeft = () => {
-    let counter
-    if (this.state.current_image === 0) {
-      counter = this.state.fotos.length - 1
-    } else counter = this.state.current_image - 1
-
-    this.setState({
-      current_image: counter
-    })
-  }
+    this.setState((prevState) => ({
+      current_image: prevState.current_image === 0 ? prevState.fotos.length - 1 : prevState.current_image - 1
+    }));
+  };
 
   changeRight = () => {
-    let counter
-    if (this.state.fotos.length - 1 === this.state.current_image) {
-      counter = 0
-    } else counter = this.state.current_image + 1
-
-    this.setState({
-      current_image: counter
-    })
-  }
+    this.setState((prevState) => ({
+      current_image: prevState.current_image === prevState.fotos.length - 1 ? 0 : prevState.current_image + 1
+    }));
+  };
 
   render() {
     const { error, isLoaded, fotos, current_image } = this.state;
