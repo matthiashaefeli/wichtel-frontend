@@ -16,44 +16,53 @@ class Place extends Component {
   }
 
   componentDidMount = () => {
-    axios.get('https://wichtelhuss.herokuapp.com/place_home')
-    .then(
-      result => {
-        this.setState({
-          isLoaded: true,
-          fotos: result.data
-        })
-      },
-      error => {
-        this.setState({
-          isLoaded: true,
-          error
-        })
-      }
-    )
-  }
+    // Manually list image filenames stored in public/images/
+    const imageList = [
+      "/images/places/place_1.jpg",
+      "/images/places/place_2.jpg",
+      "/images/places/place_3.jpg",
+      "/images/places/place_4.jpg",
+      "/images/places/place_5.jpg",
+      "/images/places/place_6.jpg",
+      "/images/places/place_7.jpg",
+    ];
+
+    // Simulating an API call to load images
+    this.setState({
+      isLoaded: true,
+      fotos: imageList
+    });
+  };
+
+  // componentDidMount = () => {
+  //   axios.get('https://wichtelhuss.herokuapp.com/place_home')
+  //   .then(
+  //     result => {
+  //       this.setState({
+  //         isLoaded: true,
+  //         fotos: result.data
+  //       })
+  //     },
+  //     error => {
+  //       this.setState({
+  //         isLoaded: true,
+  //         error
+  //       })
+  //     }
+  //   )
+  // }
 
   changeLeft = () => {
-    let counter
-    if (this.state.current_image === 0) {
-      counter = this.state.fotos.length - 1
-    } else counter = this.state.current_image - 1
-
-    this.setState({
-      current_image: counter
-    })
-  }
+    this.setState((prevState) => ({
+      current_image: prevState.current_image === 0 ? prevState.fotos.length - 1 : prevState.current_image - 1
+    }));
+  };
 
   changeRight = () => {
-    let counter
-    if (this.state.fotos.length - 1 === this.state.current_image) {
-      counter = 0
-    } else counter = this.state.current_image + 1
-
-    this.setState({
-      current_image: counter
-    })
-  }
+    this.setState((prevState) => ({
+      current_image: prevState.current_image === prevState.fotos.length - 1 ? 0 : prevState.current_image + 1
+    }));
+  };
 
   render() {
     const { error, isLoaded, fotos, current_image } = this.state;
@@ -72,9 +81,16 @@ class Place extends Component {
                      onClick={this.changeLeft}
                   />
                 </div>
-                <div className='fotosFoto'>
-                  <Detail key={fotos[current_image].id} detail={fotos[current_image]} type='foto' />
+                <div className="fotosFoto">
+                  <img
+                    src={fotos[current_image]}
+                    alt={`Image ${current_image + 1}`}
+                    className="image"
+                  />
                 </div>
+                {/* <div className='fotosFoto'>
+                  <Detail key={fotos[current_image].id} detail={fotos[current_image]} type='foto' />
+                </div> */}
                 <div className='fotosArrow'>
                   <FontAwesomeIcon
                     icon={faArrowCircleRight}

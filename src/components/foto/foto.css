@@ -20,6 +20,12 @@
 
 .fotosFoto {
   text-align: center;
+  max-width: 1250px;
+  margin: auto;
+}
+
+.image {
+  width: 80%;
 }
 
 @media only screen and (max-width: 1000px) {

@@ -34,7 +34,6 @@ class Form extends Component {
                       subject: this.state.subject,
                       message: this.state.message
       }})
-      console.log(response)
     } catch (e) {
       console.log(e)
     }
@@ -50,7 +49,6 @@ class Form extends Component {
 
 
   render() {
-    console.log(this.state.response)
     return (
       <div className='contactFormMain'>
         <div className='contactInfo'>
@@ -60,6 +58,12 @@ class Form extends Component {
           079 390 43 19
         </div>
         <div className='contactForm'>
+          Hast du Fragen oder möchtest du mehr über das Wichtelhuus erfahren?<br />
+          Ich freue mich über deine Nachricht! Schreib mir einfach eine E-Mail an:<br />
+          <a href="mailto:spielgruppewichtelhuus@gmail.com">spielgruppewichtelhuus@gmail.com</a><br /><br />
+          Ich melde mich so schnell wie möglich zurück!<br />
+        </div>
+        {/* <div className='contactForm'>
           <h1>Fragen?</h1>
           <form>
             <div>
@@ -112,7 +116,7 @@ class Form extends Component {
                 onClick={this.handleSubmit} />
             </div>
           </form>
-        </div>
+        </div> */}
       </div>
     );
   }
