@@ -7,53 +7,49 @@ import { faArrowCircleRight, faArrowCircleLeft } from '@fortawesome/free-solid-s
 import ErrorImage from '../error/Error';
 import './foto.css'
 
+function importAll(r) {
+  return r.keys().map(r);
+}
+
+const images = importAll(require.context("../../assets/images", false, /\.(png|jpe?g|svg)$/));
+
 class Foto extends Component {
   state = {
     error: '',
-    isLoaded: false,
-    fotos: [],
+    isLoaded: true,
+    fotos: images,
     current_image: 0
   }
 
-  componentDidMount = () => {
-    axios.get('https://wichtelhuss.herokuapp.com/fotos_home')
-    .then(
-      result => {
-        this.setState({
-          isLoaded: true,
-          fotos: result.data
-        })
-      },
-      error => {
-        this.setState({
-          isLoaded: true,
-          error
-        })
-      }
-    )
-  }
+  // componentDidMount = () => {
+  //   axios.get('https://wichtelhuss.herokuapp.com/fotos_home')
+  //   .then(
+  //     result => {
+  //       this.setState({
+  //         isLoaded: true,
+  //         fotos: result.data
+  //       })
+  //     },
+  //     error => {
+  //       this.setState({
+  //         isLoaded: true,
+  //         error
+  //       })
+  //     }
+  //   )
+  // }
 
   changeLeft = () => {
-    let counter
-    if (this.state.current_image === 0) {
-      counter = this.state.fotos.length - 1
-    } else counter = this.state.current_image - 1
-
-    this.setState({
-      current_image: counter
-    })
-  }
+    this.setState((prevState) => ({
+      current_image: prevState.current_image === 0 ? prevState.fotos.length - 1 : prevState.current_image - 1
+    }));
+  };
 
   changeRight = () => {
-    let counter
-    if (this.state.fotos.length - 1 === this.state.current_image) {
-      counter = 0
-    } else counter = this.state.current_image + 1
-
-    this.setState({
-      current_image: counter
-    })
-  }
+    this.setState((prevState) => ({
+      current_image: prevState.current_image === prevState.fotos.length - 1 ? 0 : prevState.current_image + 1
+    }));
+  };
 
   render() {
     const { error, isLoaded, fotos, current_image } = this.state;
@@ -73,7 +69,7 @@ class Foto extends Component {
                   />
                 </div>
                 <div className='fotosFoto'>
-                  <Detail key={fotos[current_image].id} detail={fotos[current_image]} type='foto' />
+                  <Detail key={current_image} detail={{ image: fotos[current_image] }} type="foto" />
                 </div>
                 <div className='fotosArrow'>
                   <FontAwesomeIcon
