@@ -55,7 +55,7 @@ class Form extends Component {
           Wichtelhuus<br />
           Seengerstrasse 7<br />
           5706 Boniswil AG<br />
-          079 390 43 19
+          079 463 21 61
         </div>
         <div className='contactForm'>
           Hast du Fragen oder möchtest du mehr über das Wichtelhuus erfahren?<br />
