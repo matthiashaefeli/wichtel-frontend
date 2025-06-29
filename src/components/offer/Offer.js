@@ -18,7 +18,8 @@ class Offer extends Component {
           Rahmen der Spielgruppe die langsame Ablösung von seinen engsten Bezugspersonen üben.
         </p>
         <p>
-          Die Spielgruppe findet von Montag- Freitag jeden Morgen um 8:30 Uhr bis 11:30 Uhr statt.
+          Die Spielgruppe findet von Montag- Freitag jeden Morgen um 8:30 Uhr bis 11:30 Uhr statt,
+          und jeden Donnerstag Nachmittag von 13:40 Uhr - 16:30 Uhr.
         </p>
         <p>
           Ausser den Schulferien, wo wir uns nach der Schule Boniswil richten.
